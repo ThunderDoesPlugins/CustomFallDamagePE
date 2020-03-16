@@ -5,13 +5,15 @@ declare(strict_types=1);
 namespace Thunder33345\CustomFallDamagePE;
 
 use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 
-class CustomFallDamage extends PluginBase
+class CustomFallDamage extends PluginBase implements Listener
 {
 	public function onEnable()
 	{
 		$this->saveDefaultConfig();
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 
 	public function onFall(EntityDamageEvent $event)
