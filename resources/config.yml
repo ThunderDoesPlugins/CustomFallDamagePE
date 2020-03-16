@@ -18,6 +18,19 @@
 
   default-cutoff: 0, #0 for default no cutoff
   cutoff: {
-    world: 5 #anything below or equal to 5fg will be reduced to 0
-  }
+    world: 5 #anything below or equal to 5 will be reduced to 0
+  },
+
+  worldguard: false, #enable world guard support, must have world guard installed
+  #this allows you to define custom fall damage modification for each regions
+  #when a region is not defined, it will try to use the world, then default/global setting
+  regions: { #world guard region settings
+    area31: { #the region name(one with highest priority)
+      multiplier: 0.7,
+      sum: 5,
+      cutoff: 8,
+    },
+  },
+
+  playeronly: true, #ignore other non players entities(this applies for all worlds and regions)
 }
