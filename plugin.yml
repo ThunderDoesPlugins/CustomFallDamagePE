@@ -1,0 +1,5 @@
+name: CustomFallDamagePE
+version: 1.0.0
+api: ["3.0.0"]
+author: Thunder33345
+main: Thunder33345\CustomFallDamagePE\CustomFallDamage

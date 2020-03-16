@@ -1,0 +1,23 @@
+{
+  #order of operation is: Multiply, Sum, Cutoff
+  default-multiplier: 1, #1 for default
+  multiplier: { #world name(case sensitive) not folder name, use worldtp list worlds to find world name
+    # This works by damage = original damage * value
+    world: 0.4, #only takes 40% of original dmg(aka reduce by 60%)
+    hardcore: 3, #fall damage get multiplied by x3
+    nofall: 0, #set fall damage to 0, anything * 0 = 0
+  },
+
+  default-sum: 0, #default sum
+  sum:{
+    #this works by summing the damage(after multiplier) and the value
+    #due to technicalities, this only happen when player takes fall damage(3 block less fall will always be 0 dmg)
+    world: -3, #-3 fall dmg
+    hardcore: 5, #+5 to any fall dmg
+  },
+
+  default-cutoff: 0, #0 for default no cutoff
+  cutoff: {
+    world: 5 #anything below or equal to 5fg will be reduced to 0
+  }
+}
