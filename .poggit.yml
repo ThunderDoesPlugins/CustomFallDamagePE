@@ -2,7 +2,9 @@
 build-by-default: true
 branches:
 - master
+- worldguard
 projects:
   CustomFallDamagePE:
     path: ""
+    icon: "resources/icon.png"
 ...
